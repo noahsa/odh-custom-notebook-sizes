@@ -13,7 +13,7 @@ Add a custom notebook size to the JupyterHub spawner in ODH
 1. In the OpenShift Web Console, navigate to the namespace where ODH is installed
 2. Click `ConfigMaps` in the navigation panel
 3. Click the `Create ConfigMap` button
-4. Paste the below sample `ConfigMap` over all default text and click `Create`. This will add a new notebook size to the Jupyter console named `XX-Large-Memory`
+4. Paste the below sample `ConfigMap` over all default text. You will need to update the namespace.
 
     ```yaml
     kind: ConfigMap
@@ -35,3 +35,7 @@ Add a custom notebook size to the JupyterHub spawner in ODH
                 memory: 16Gi
                 cpu: 4
     ```
+
+5. Click `Create`
+
+6. Navigate to your ODH deployed JupyterHub spawner. You will see the custom notebook size `XX-Large-Memory` in the list of available notebook sizes!
